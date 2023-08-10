@@ -569,10 +569,10 @@ namespace Net.Pkcs11Admin.Configuration
             ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000003, new EnumMember() { Name = "CKH_IS_LICENSED", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000003, FriendlyName = "", Description = "TODO" });
             ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000004, new EnumMember() { Name = "CKH_PSS_QSCD", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000004, FriendlyName = "", Description = "TODO" });
             ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000005, new EnumMember() { Name = "CKH_CACHE_VERSION", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000005, FriendlyName = "", Description = "TODO" });
-            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, new EnumMember() { Name = "CKH_RFU6", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, FriendlyName = "", Description = "TODO" });
-            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000007, new EnumMember() { Name = "CKH_RFU7", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, FriendlyName = "", Description = "TODO" });
-            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, new EnumMember() { Name = "CKH_RFU8", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, FriendlyName = "", Description = "TODO" });
-            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, new EnumMember() { Name = "CKH_RFU9", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, new EnumMember() { Name = "CKH_DUAL_PIN", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000007, new EnumMember() { Name = "CKH_PIN_FORMAT_INFO", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000007, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, new EnumMember() { Name = "CKH_RFU8", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, new EnumMember() { Name = "CKH_RFU9", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, FriendlyName = "", Description = "TODO" });
 
             #endregion
 
@@ -620,11 +620,11 @@ namespace Net.Pkcs11Admin.Configuration
             cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000005), new ClassAttributes());
             cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000005)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
 
-            // RFU6
+            // DUAL_PIN
             cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000006), new ClassAttributes());
             cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000006)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
 
-            // RFU7
+            // PIN_FORMAT_INFO
             cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000007), new ClassAttributes());
             cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000007)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
 
