@@ -571,8 +571,9 @@ namespace Net.Pkcs11Admin.Configuration
             ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000005, new EnumMember() { Name = "CKH_CACHE_VERSION", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000005, FriendlyName = "", Description = "TODO" });
             ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, new EnumMember() { Name = "CKH_DUAL_PIN", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000006, FriendlyName = "", Description = "TODO" });
             ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000007, new EnumMember() { Name = "CKH_PIN_FORMAT_INFO", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000007, FriendlyName = "", Description = "TODO" });
-            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, new EnumMember() { Name = "CKH_RFU8", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, FriendlyName = "", Description = "TODO" });
-            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, new EnumMember() { Name = "CKH_RFU9", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, new EnumMember() { Name = "CKH_MAX_FINGERPRINTS", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000008, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, new EnumMember() { Name = "CKH_HAS_FP_HARDWARE", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x10000009, FriendlyName = "", Description = "TODO" });
+            ckhEnum.Add((ulong)CKH.CKH_VENDOR_DEFINED + 0x1000000a, new EnumMember() { Name = "CKH_PRODUCT_INFOS", Value = (ulong)CKH.CKH_VENDOR_DEFINED + 0x1000000a, FriendlyName = "", Description = "TODO" });
 
             #endregion
 
@@ -628,13 +629,17 @@ namespace Net.Pkcs11Admin.Configuration
             cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000007), new ClassAttributes());
             cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000007)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
 
-            // RFU8
+            // MAX_FINGERPRINTS
             cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000008), new ClassAttributes());
             cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000008)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
 
-            // RFU9
+            // HAS_FP_HARDWARE
             cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000009), new ClassAttributes());
             cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x10000009)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
+
+            // PRODUCT_INFOS
+            cfg.HwFeatureAttributes.TypeSpecificAttributes.Add((ulong)(CKH.CKH_VENDOR_DEFINED + 0x1000000a), new ClassAttributes());
+            cfg.HwFeatureAttributes.TypeSpecificAttributes[(ulong)(CKH.CKH_VENDOR_DEFINED + 0x1000000a)].Add(new ClassAttribute() { Value = (ulong)CKA.CKA_VALUE, CreateDefaultValue = null, CreateSetByDefault = true });
 
             #endregion
 
